@@ -1,0 +1,406 @@
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Moon,
+  Sun,
+  ExternalLink,
+  ArrowRight,
+  Code2,
+  Briefcase,
+  User,
+  Image as ImageIcon,
+} from "lucide-react";
+import { Button } from "./components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./components/ui/card";
+import { Badge } from "./components/ui/badge";
+
+import { Nav } from "./components/ui/nav";
+
+export function ThemeToggle() {
+  const [dark, setDark] = React.useState(false);
+  React.useEffect(() => {
+    if (dark) document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
+  }, [dark]);
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      aria-label="Toggle theme"
+      onClick={() => setDark((d) => !d)}
+    >
+      {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+    </Button>
+  );
+}
+
+const links = {
+  github: "https://github.com/enriquevillon25",
+  linkedin: "https://www.linkedin.com/in/enriquevillon97/",
+  email: "mailto:enriquevillon2597@example.com",
+};
+
+const projects = [
+  {
+    title: "Auna Hero Slider",
+    description:
+      "Responsive hero/banner slider with Storybook controls, tokens, and SVG assets. Built with React + Vite.",
+    tags: ["React", "Storybook", "Vite", "Design System"],
+    href: "#",
+    repo: "#",
+  },
+  {
+    title: "GraphicIndicator (RN)",
+    description:
+      "Interactive line chart with SVG, gestures and horizontal scroll. Performance‑tuned for RN.",
+    tags: ["React Native", "SVG", "Reanimated"],
+    href: "#",
+    repo: "#",
+  },
+  {
+    title: "Strapi CMS Kit",
+    description:
+      "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
+    tags: ["Strapi", "MySQL", "Docker"],
+    href: "#",
+    repo: "#",
+  },
+];
+
+const experience = [
+  {
+    role: "Senior Front‑End (React / RN)",
+    company: "Auna Digital",
+    period: "2022 — Present",
+    points: [
+      "Built and maintained design-system components (HeroSlider, FloatingButtonSection).",
+      "Led performance and accessibility improvements across web and mobile apps.",
+      "Collaborated with platform squads on CI/CD and package versioning.",
+    ],
+  },
+  {
+    role: "Founder",
+    company: "Rbit Informática & Telecomunicaciones",
+    period: "2019 — Present",
+    points: [
+      "Computer repair, custom PC builds, and local SEO presence.",
+      "Handled sourcing, diagnostics, and data‑recovery workflows.",
+    ],
+  },
+];
+
+const skills = [
+  "React",
+  "React Native",
+  "Angular",
+  "TypeScript",
+  "Next.js",
+  "Tailwind",
+  "shadcn/ui",
+  "Node.js",
+  "Docker",
+  "Strapi",
+  "MySQL",
+  "Testing Library",
+  "Playwright",
+];
+
+
+function Section({
+  id,
+  icon: Icon,
+  title,
+  children,
+}: {
+  id: string;
+  icon: React.ElementType;
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section id={id} className="scroll-mt-24">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="p-2 rounded-2xl bg-primary/10">
+          <Icon className="h-5 w-5 text-primary" />
+        </div>
+        <h2 className="text-xl md:text-2xl font-semibold">{title}</h2>
+      </div>
+      {children}
+    </section>
+  );
+}
+
+function Container({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+      {children}
+    </div>
+  );
+}
+
+function Hero() {
+  return (
+    <div id="home" className="border-b">
+      <Container>
+        <div className="grid lg:grid-cols-12 gap-8 py-14 md:py-20 items-center">
+          <div className="lg:col-span-7">
+            <motion.h1
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight"
+            >
+              Enrique Villón
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="mt-4 text-muted-foreground text-base md:text-lg"
+            >
+              Senior Front‑End & React Native Developer — I build fast,
+              accessible products and robust design‑system components.
+            </motion.p>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <Button asChild size="lg">
+                <a href="#projects">
+                  See my work <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href={links.github}>
+                  <Github className="mr-2 h-4 w-4" /> GitHub
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href={links.linkedin}>
+                  <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+                </a>
+              </Button>
+            </div>
+          </div>
+          <div className="lg:col-span-5 lg:pl-8">
+            <Card className="overflow-hidden">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <ImageIcon className="h-5 w-5" /> Featured
+                </CardTitle>
+                <CardDescription>Latest project preview</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="aspect-video w-full rounded-xl bg-muted grid place-items-center">
+                  <span className="text-muted-foreground text-sm">
+                    Project screenshot / video
+                  </span>
+                </div>
+              </CardContent>
+              <CardFooter className="justify-between">
+                <div className="flex gap-2">
+                  <Badge>React</Badge>
+                  <Badge variant="secondary">Next.js</Badge>
+                  <Badge variant="secondary">Tailwind</Badge>
+                </div>
+                <Button variant="ghost" asChild>
+                  <a href="#projects">
+                    Open <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      </Container>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <Section id="about" icon={User} title="About">
+      <div className="grid lg:grid-cols-12 gap-8">
+        <div className="lg:col-span-7">
+          <p className="text-muted-foreground leading-relaxed">
+            I’m a software engineer focused on product quality and developer
+            experience. I design systems, ship features, and mentor teams on
+            accessibility, testing, performance, and maintainable front‑end
+            architectures.
+          </p>
+        </div>
+        <div className="lg:col-span-5">
+          <div className="flex flex-wrap gap-2">
+            {skills.map((s) => (
+              <Badge key={s} variant="secondary">
+                {s}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+function Projects() {
+  return (
+    <Section id="projects" icon={Code2} title="Projects">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((p) => (
+          <Card key={p.title} className="flex flex-col">
+            <CardHeader>
+              <CardTitle className="text-base md:text-lg">{p.title}</CardTitle>
+              <CardDescription>{p.description}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="aspect-video rounded-xl bg-muted grid place-items-center">
+                <span className="text-xs text-muted-foreground">
+                  Screenshot
+                </span>
+              </div>
+              <div className="mt-4 flex gap-2 flex-wrap">
+                {p.tags.map((t) => (
+                  <Badge key={t} variant="secondary">
+                    {t}
+                  </Badge>
+                ))}
+              </div>
+            </CardContent>
+            <CardFooter className="mt-auto flex gap-2">
+              <Button asChild size="sm">
+                <a href={p.href}>Live</a>
+              </Button>
+              <Button asChild size="sm" variant="outline">
+                <a href={p.repo}>Code</a>
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+function Experience() {
+  return (
+    <Section id="experience" icon={Briefcase} title="Experience">
+      <div className="grid gap-4">
+        {experience.map((e) => (
+          <Card key={e.role + e.company}>
+            <CardHeader>
+              <CardTitle className="text-base md:text-lg">
+                {e.role} — {e.company}
+              </CardTitle>
+              <CardDescription>{e.period}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc pl-5 text-muted-foreground space-y-1">
+                {e.points.map((pt) => (
+                  <li key={pt}>{pt}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+function Contact() {
+  return (
+    <Section id="contact" icon={Mail} title="Contact">
+      <div className="grid md:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Email</CardTitle>
+            <CardDescription>Let’s build something great.</CardDescription>
+          </CardHeader>
+          <CardFooter>
+            <Button asChild size="lg">
+              <a href={links.email}>enriquevillon2597@gmail.com</a>
+            </Button>
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Social</CardTitle>
+            <CardDescription>Follow or message me</CardDescription>
+          </CardHeader>
+          <CardFooter className="flex gap-3">
+            <Button asChild variant="outline">
+              <a href={links.github}>
+                <Github className="mr-2 h-4 w-4" />
+                GitHub
+              </a>
+            </Button>
+            <Button asChild variant="outline">
+              <a href={links.linkedin}>
+                <Linkedin className="mr-2 h-4 w-4" />
+                LinkedIn
+              </a>
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
+    </Section>
+  );
+}
+
+export default function PortfolioPage() {
+  return (
+    <div className="min-h-screen bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
+      <Nav />
+      <main>
+        <Hero />
+        <Container>
+          <div className="py-12 md:py-16 space-y-16">
+            <About />
+            <Projects />
+            <Experience />
+            <Contact />
+          </div>
+        </Container>
+      </main>
+      <footer className="border-t py-8">
+        <Container>
+          <div className="text-sm text-muted-foreground flex flex-wrap items-center gap-3 justify-between">
+            <span>© {new Date().getFullYear()} Enrique Villón</span>
+            <div className="flex items-center gap-2">
+              <a
+                className="p-2 rounded-lg hover:bg-accent"
+                href={links.github}
+                aria-label="GitHub"
+              >
+                <Github className="h-4 w-4" />
+              </a>
+              <a
+                className="p-2 rounded-lg hover:bg-accent"
+                href={links.linkedin}
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-4 w-4" />
+              </a>
+              <a
+                className="p-2 rounded-lg hover:bg-accent"
+                href={links.email}
+                aria-label="Email"
+              >
+                <Mail className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </Container>
+      </footer>
+    </div>
+  );
+}
