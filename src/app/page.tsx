@@ -26,24 +26,10 @@ import {
 import { Badge } from "./components/ui/badge";
 
 import { Nav } from "./components/ui/nav";
+import { Container } from "./components/ui/container";
 
-export function ThemeToggle() {
-  const [dark, setDark] = React.useState(false);
-  React.useEffect(() => {
-    if (dark) document.documentElement.classList.add("dark");
-    else document.documentElement.classList.remove("dark");
-  }, [dark]);
-  return (
-    <Button
-      variant="ghost"
-      size="icon"
-      aria-label="Toggle theme"
-      onClick={() => setDark((d) => !d)}
-    >
-      {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-    </Button>
-  );
-}
+import testImage from "../app/images/auna.org_pe.png";
+import Image from "next/image";
 
 const links = {
   github: "https://github.com/enriquevillon25",
@@ -53,6 +39,7 @@ const links = {
 
 const projects = [
   {
+    image: testImage,
     title: "Auna Hero Slider",
     description:
       "Responsive hero/banner slider with Storybook controls, tokens, and SVG assets. Built with React + Vite.",
@@ -61,6 +48,7 @@ const projects = [
     repo: "#",
   },
   {
+    image: "",
     title: "GraphicIndicator (RN)",
     description:
       "Interactive line chart with SVG, gestures and horizontal scroll. Performance‑tuned for RN.",
@@ -69,6 +57,7 @@ const projects = [
     repo: "#",
   },
   {
+    image: "",
     title: "Strapi CMS Kit",
     description:
       "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
@@ -82,7 +71,7 @@ const experience = [
   {
     role: "Senior Front‑End (React / RN)",
     company: "Auna Digital",
-    period: "2022 — Present",
+    period: "2024 — Present",
     points: [
       "Built and maintained design-system components (HeroSlider, FloatingButtonSection).",
       "Led performance and accessibility improvements across web and mobile apps.",
@@ -116,7 +105,6 @@ const skills = [
   "Playwright",
 ];
 
-
 function Section({
   id,
   icon: Icon,
@@ -138,14 +126,6 @@ function Section({
       </div>
       {children}
     </section>
-  );
-}
-
-function Container({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-      {children}
-    </div>
   );
 }
 
@@ -263,9 +243,15 @@ function Projects() {
             </CardHeader>
             <CardContent>
               <div className="aspect-video rounded-xl bg-muted grid place-items-center">
-                <span className="text-xs text-muted-foreground">
+                {/* <span className="text-xs text-muted-foreground">
                   Screenshot
-                </span>
+                </span> */}
+                <Image
+                  src={p.image}
+                  alt="Project preview"
+                  className="object-cover"
+                  priority // si esta es tu LCP
+                />
               </div>
               <div className="mt-4 flex gap-2 flex-wrap">
                 {p.tags.map((t) => (
@@ -358,7 +344,7 @@ function Contact() {
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <Nav />
       <main>
         <Hero />

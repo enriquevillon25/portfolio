@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { ThemeToggle } from "@/app/page"; // opcional mover a archivo propio
 import { Button } from "./button";
 import {
   Sheet,
@@ -12,6 +11,7 @@ import {
   SheetClose,
 } from "./sheet";
 import { Github, Linkedin, Menu, X } from "lucide-react";
+import { ThemeToggle } from "./themeToggle";
 
 // Contenedor simple
 function Container({ children }: { children: React.ReactNode }) {
