@@ -30,6 +30,9 @@ import { Container } from "./components/ui/container";
 
 import testImage from "../app/images/auna.org_pe.png";
 import Image from "next/image";
+import { Slider } from "./components/ui/slider";
+import { Contact } from "./components/ui/contact";
+import { Section } from "./components/ui/section";
 
 const links = {
   github: "https://github.com/enriquevillon25",
@@ -59,6 +62,24 @@ const projects = [
   {
     image: "",
     title: "Strapi CMS Kit",
+    description:
+      "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
+    tags: ["Strapi", "MySQL", "Docker"],
+    href: "#",
+    repo: "#",
+  },
+  {
+    image: "",
+    title: "Strapi CMS Kit 2",
+    description:
+      "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
+    tags: ["Strapi", "MySQL", "Docker"],
+    href: "#",
+    repo: "#",
+  },
+  {
+    image: "",
+    title: "Strapi CMS Kit 3",
     description:
       "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
     tags: ["Strapi", "MySQL", "Docker"],
@@ -105,30 +126,6 @@ const skills = [
   "Playwright",
 ];
 
-function Section({
-  id,
-  icon: Icon,
-  title,
-  children,
-}: {
-  id: string;
-  icon: React.ElementType;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section id={id} className="scroll-mt-24">
-      <div className="flex items-center gap-3 mb-6">
-        <div className="p-2 rounded-2xl bg-primary/10">
-          <Icon className="h-5 w-5 text-primary" />
-        </div>
-        <h2 className="text-xl md:text-2xl font-semibold">{title}</h2>
-      </div>
-      {children}
-    </section>
-  );
-}
-
 function Hero() {
   return (
     <div id="home" className="border-b">
@@ -138,7 +135,7 @@ function Hero() {
             <motion.h1
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight"
             >
               Enrique Villón
@@ -234,7 +231,8 @@ function About() {
 function Projects() {
   return (
     <Section id="projects" icon={Code2} title="Projects">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"> */}
+      <Slider className="mt-2" slideClassName="w-full sm:w-1/2 lg:w-1/3">
         {projects.map((p) => (
           <Card key={p.title} className="flex flex-col">
             <CardHeader>
@@ -242,10 +240,7 @@ function Projects() {
               <CardDescription>{p.description}</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video rounded-xl bg-muted grid place-items-center">
-                {/* <span className="text-xs text-muted-foreground">
-                  Screenshot
-                </span> */}
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-muted">
                 <Image
                   src={p.image}
                   alt="Project preview"
@@ -271,7 +266,8 @@ function Projects() {
             </CardFooter>
           </Card>
         ))}
-      </div>
+      </Slider>
+      {/* </div> */}
     </Section>
   );
 }
@@ -297,46 +293,6 @@ function Experience() {
             </CardContent>
           </Card>
         ))}
-      </div>
-    </Section>
-  );
-}
-
-function Contact() {
-  return (
-    <Section id="contact" icon={Mail} title="Contact">
-      <div className="grid md:grid-cols-2 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>Email</CardTitle>
-            <CardDescription>Let’s build something great.</CardDescription>
-          </CardHeader>
-          <CardFooter>
-            <Button asChild size="lg">
-              <a href={links.email}>enriquevillon2597@gmail.com</a>
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Social</CardTitle>
-            <CardDescription>Follow or message me</CardDescription>
-          </CardHeader>
-          <CardFooter className="flex gap-3">
-            <Button asChild variant="outline">
-              <a href={links.github}>
-                <Github className="mr-2 h-4 w-4" />
-                GitHub
-              </a>
-            </Button>
-            <Button asChild variant="outline">
-              <a href={links.linkedin}>
-                <Linkedin className="mr-2 h-4 w-4" />
-                LinkedIn
-              </a>
-            </Button>
-          </CardFooter>
-        </Card>
       </div>
     </Section>
   );
