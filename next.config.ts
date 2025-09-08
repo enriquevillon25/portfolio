@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
 };
 export default nextConfig;
 
-next.config.mjs
+// next.config.mjs
 
 // const isProd = process.env.NODE_ENV === "production";
 // const repo = "portfolio";
