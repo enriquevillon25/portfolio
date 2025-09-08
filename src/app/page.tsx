@@ -47,7 +47,7 @@ const hola =
 const projects = [
   {
     image: testImage,
-    title: "Auna Hero Slider",
+    title: "Auna Org",
     description:
       "Responsive hero/banner slider with Storybook controls, tokens, and SVG assets. Built with React + Vite.",
     tags: ["React", "Storybook", "Vite", "Design System"],
@@ -56,10 +56,10 @@ const projects = [
   },
   {
     image: "",
-    title: "GraphicIndicator (RN)",
+    title: "Mi Auna App",
     description:
-      "Interactive line chart with SVG, gestures and horizontal scroll. Performance‑tuned for RN.",
-    tags: ["React Native", "SVG", "Reanimated"],
+      "Cross-platform React Native app for Auna customers, with authentication, billing, and support chat.",
+    tags: ["React Native", "Angular", "Reanimated"],
     href: "#",
     repo: "#",
   },
@@ -67,8 +67,8 @@ const projects = [
     image: testUtp,
     title: "UTP+Class",
     description:
-      "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
-    tags: ["Strapi", "MySQL", "Docker"],
+      "E‑learning mobile app for UTP university, with video streaming, quizzes, and certificates.",
+    tags: ["React", "Tailwind CSS", "MySQL", "Docker"],
     href: "#",
     repo: "#",
   },
@@ -195,7 +195,6 @@ function Hero() {
                     srcB={testImage2}
                     effect="fade"
                     className="h-full"
-                 
                   />
                 </div>
               </CardContent>
