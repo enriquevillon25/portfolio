@@ -5,8 +5,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Moon,
-  Sun,
   ExternalLink,
   ArrowRight,
   Code2,
@@ -29,16 +27,22 @@ import { Nav } from "./components/ui/nav";
 import { Container } from "./components/ui/container";
 
 import testImage from "../app/images/auna.org_pe.png";
+import testImage2 from "../app/images/auna_classic.png";
+import testUtp from "../app/images/utp+class.png";
 import Image from "next/image";
 import { Slider } from "./components/ui/slider";
 import { Contact } from "./components/ui/contact";
 import { Section } from "./components/ui/section";
+import TwoImageTransition from "./components/ui/twoImageTransition";
 
 const links = {
   github: "https://github.com/enriquevillon25",
   linkedin: "https://www.linkedin.com/in/enriquevillon97/",
   email: "mailto:enriquevillon2597@example.com",
 };
+
+const hola =
+  "https://cdn.pixabay.com/photo/2022/10/09/14/52/windows-7509369_1280.jpg";
 
 const projects = [
   {
@@ -60,8 +64,8 @@ const projects = [
     repo: "#",
   },
   {
-    image: "",
-    title: "Strapi CMS Kit",
+    image: testUtp,
+    title: "UTP+Class",
     description:
       "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
     tags: ["Strapi", "MySQL", "Docker"],
@@ -90,13 +94,22 @@ const projects = [
 
 const experience = [
   {
-    role: "Senior Front‑End (React / RN)",
+    role: "Senior Front‑End (React / ReactNative)",
     company: "Auna Digital",
     period: "2024 — Present",
     points: [
       "Built and maintained design-system components (HeroSlider, FloatingButtonSection).",
       "Led performance and accessibility improvements across web and mobile apps.",
       "Collaborated with platform squads on CI/CD and package versioning.",
+    ],
+  },
+  {
+    role: "Senior Mobile (React Native)",
+    company: "Rbit Informática & Telecomunicaciones",
+    period: "2019 — Present",
+    points: [
+      "Computer repair, custom PC builds, and local SEO presence.",
+      "Handled sourcing, diagnostics, and data‑recovery workflows.",
     ],
   },
   {
@@ -177,9 +190,13 @@ function Hero() {
               </CardHeader>
               <CardContent>
                 <div className="aspect-video w-full rounded-xl bg-muted grid place-items-center">
-                  <span className="text-muted-foreground text-sm">
-                    Project screenshot / video
-                  </span>
+                  <TwoImageTransition
+                    srcA={testImage}
+                    srcB={testImage2}
+                    effect="fade"
+                    className="h-full"
+                 
+                  />
                 </div>
               </CardContent>
               <CardFooter className="justify-between">
