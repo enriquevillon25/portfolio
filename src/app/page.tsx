@@ -261,7 +261,7 @@ function Projects() {
                   src={p.image}
                   alt="Project preview"
                   className="object-cover"
-                  priority // si esta es tu LCP
+                  priority
                 />
               </div>
               <div className="mt-4 flex gap-2 flex-wrap">
