@@ -52,7 +52,7 @@ const projects = [
     repo: "#",
   },
   {
-    image: "",
+    image: testImage,
     title: "Mi Auna App",
     description:
       "Cross-platform React Native app for Auna customers, with authentication, billing, and support chat.",
@@ -70,7 +70,7 @@ const projects = [
     repo: "#",
   },
   {
-    image: "",
+    image: testImage,
     title: "Strapi CMS Kit 2",
     description:
       "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
@@ -79,7 +79,7 @@ const projects = [
     repo: "#",
   },
   {
-    image: "",
+    image: testImage,
     title: "Strapi CMS Kit 3",
     description:
       "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
