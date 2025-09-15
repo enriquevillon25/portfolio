@@ -12,7 +12,7 @@ export function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-24">
+    <section id={id} className="scroll-mt-20">
       <div className="flex items-center gap-3 mb-6">
         <div className="p-2 rounded-2xl bg-primary/10">
           <Icon className="h-5 w-5 text-primary" />

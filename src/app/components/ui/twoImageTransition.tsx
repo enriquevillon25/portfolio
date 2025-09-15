@@ -145,7 +145,7 @@ export default function TwoImageTransition({
 
   /** Transición tipada */
   const t: Transition = { duration: durationMs / 1000, ease: easeInOut };
-  const objFitClass = fit === "contain" ? "object-contain" : "object-cover";
+  const objFitClass = fit === "contain" ? "unset" : "unset";
 
   return (
     <div

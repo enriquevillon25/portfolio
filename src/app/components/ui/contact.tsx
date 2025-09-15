@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "./card";
 import { Section } from "./section";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Instagram, Github, Linkedin, Mail } from "lucide-react";
 
 export function Contact() {
   const links = {
@@ -41,12 +41,18 @@ export function Contact() {
                 GitHub
               </a>
             </Button>
-            <Button asChild variant="outline">
-              <a href={links.linkedin}>
-                <Linkedin className="mr-2 h-4 w-4" />
-                LinkedIn
-              </a>
-            </Button>
+              <Button asChild variant="outline">
+                <a href={links.linkedin}>
+                  <Linkedin className="mr-2 h-4 w-4" />
+                  LinkedIn
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={links.linkedin}>
+                  <Instagram className="mr-2 h-4 w-4" />
+                  Instagram
+                </a>
+              </Button> 
           </CardFooter>
         </Card>
       </div>

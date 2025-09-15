@@ -41,9 +41,6 @@ const links = {
   email: "mailto:enriquevillon2597@example.com",
 };
 
-const hola =
-  "https://cdn.pixabay.com/photo/2022/10/09/14/52/windows-7509369_1280.jpg";
-
 const projects = [
   {
     image: testImage,
@@ -143,7 +140,7 @@ function Hero() {
   return (
     <div id="home" className="border-b">
       <Container>
-        <div className="grid lg:grid-cols-12 gap-8 py-14 md:py-20 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 py-8 lg:py-16 md:py-20 items-center">
           <div className="lg:col-span-7">
             <motion.h1
               initial={{ opacity: 0, y: 8 }}
@@ -169,12 +166,12 @@ function Hero() {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href={links.github}>
+                <a href={links.github} target="_blank">
                   <Github className="mr-2 h-4 w-4" /> GitHub
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href={links.linkedin}>
+                <a href={links.linkedin} target="_blank">
                   <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
                 </a>
               </Button>
@@ -250,7 +247,7 @@ function Projects() {
       {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"> */}
       <Slider className="mt-2" slideClassName="w-full sm:w-1/2 lg:w-1/3">
         {projects.map((p) => (
-          <Card key={p.title} className="flex flex-col">
+          <Card key={p.title} className="grid grid-rows-[3fr_7fr] overflow-hidden">
             <CardHeader>
               <CardTitle className="text-base md:text-lg">{p.title}</CardTitle>
               <CardDescription>{p.description}</CardDescription>
@@ -260,11 +257,11 @@ function Projects() {
                 <Image
                   src={p.image}
                   alt="Project preview"
-                  className="object-cover"
+                  className="object-cover h-full"
                   priority
                 />
               </div>
-              <div className="mt-4 flex gap-2 flex-wrap">
+              <div className="mt-6 flex gap-2 flex-wrap">
                 {p.tags.map((t) => (
                   <Badge key={t} variant="secondary">
                     {t}
@@ -272,14 +269,14 @@ function Projects() {
                 ))}
               </div>
             </CardContent>
-            <CardFooter className="mt-auto flex gap-2">
+            {/* <CardFooter className="mt-auto flex gap-2">
               <Button asChild size="sm">
                 <a href={p.href}>Live</a>
               </Button>
               <Button asChild size="sm" variant="outline">
                 <a href={p.repo}>Code</a>
               </Button>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         ))}
       </Slider>
@@ -291,7 +288,7 @@ function Projects() {
 function Experience() {
   return (
     <Section id="experience" icon={Briefcase} title="Experience">
-      <div className="grid gap-4">
+      <div className="grid gap-6">
         {experience.map((e) => (
           <Card key={e.role + e.company}>
             <CardHeader>
@@ -321,7 +318,7 @@ export default function PortfolioPage() {
       <main>
         <Hero />
         <Container>
-          <div className="py-12 md:py-16 space-y-16">
+          <div className="py-12 md:py-16  space-y-10 md:space-y-16">
             <About />
             <Projects />
             <Experience />

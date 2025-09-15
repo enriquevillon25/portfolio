@@ -28,7 +28,7 @@ export function Slider({
   children,
   options,
   autoplay = true,
-  interval = 10000000,
+  interval = 1800,
   className = "",
   // 1 por vista en móvil, 2 en sm, 3 en lg
   slideClassName = "basis-full sm:basis-1/2 lg:basis-1/3",

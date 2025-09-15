@@ -10,7 +10,7 @@ import {
   SheetTitle,
   SheetClose,
 } from "./sheet";
-import { Github, Linkedin, Menu, X } from "lucide-react";
+import { Github, Linkedin, Instagram, Menu, X } from "lucide-react";
 import { ThemeToggle } from "./themeToggle";
 
 // Contenedor simple
@@ -99,7 +99,7 @@ export function Nav() {
               <ThemeToggle />
               <SheetTrigger asChild>
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   size="icon"
                   className={
                     "h-8 w-8 md:h-9 md:w-9 p-0 text-[hsl(var(--foreground))] " +
@@ -110,7 +110,7 @@ export function Nav() {
                   aria-controls="mobile-drawer"
                   aria-label={open ? "Close menu" : "Open menu"}
                 >
-                  <Menu className="h-4 w-4" />
+                  <Menu className="h-4 w-4"  />
                 </Button>
               </SheetTrigger>
 
@@ -187,6 +187,13 @@ export function Nav() {
                         aria-label="LinkedIn"
                       >
                         <Linkedin className="h-5 w-5" />
+                      </a>
+                      <a
+                        className="p-2 rounded-lg hover:bg-[hsl(var(--accent))]"
+                        href={links.linkedin}
+                        aria-label="LinkedIn"
+                      >
+                        <Instagram className="h-5 w-5" />
                       </a>
                     </div>
                   </div>

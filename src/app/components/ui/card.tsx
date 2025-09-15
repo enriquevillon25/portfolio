@@ -30,7 +30,7 @@ export const CardTitle = ({
 }: React.HTMLAttributes<HTMLHeadingElement>) => (
   <h3
     className={cx(
-      "text-lg font-semibold leading-none tracking-tight",
+      "text-lg font-semibold leading-none tracking-tight mb-2",
       className
     )}
     {...props}
