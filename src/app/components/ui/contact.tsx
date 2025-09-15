@@ -41,18 +41,12 @@ export function Contact() {
                 GitHub
               </a>
             </Button>
-              <Button asChild variant="outline">
-                <a href={links.linkedin}>
-                  <Linkedin className="mr-2 h-4 w-4" />
-                  LinkedIn
-                </a>
-              </Button>
-              <Button asChild variant="outline">
-                <a href={links.linkedin}>
-                  <Instagram className="mr-2 h-4 w-4" />
-                  Instagram
-                </a>
-              </Button> 
+            <Button asChild variant="outline">
+              <a href={links.linkedin}>
+                <Linkedin className="mr-2 h-4 w-4" />
+                LinkedIn
+              </a>
+            </Button>
           </CardFooter>
         </Card>
       </div>
