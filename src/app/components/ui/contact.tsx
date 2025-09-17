@@ -11,6 +11,7 @@ import { Instagram, Github, Linkedin, Mail } from "lucide-react";
 
 export function Contact() {
   const links = {
+    instagram: "https://www.instagram.com/enriquevillon",
     github: "https://github.com/enriquevillon25",
     linkedin: "https://www.linkedin.com/in/enriquevillon97/",
     email: "mailto:enriquevillon2597@example.com",

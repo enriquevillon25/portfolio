@@ -23,6 +23,7 @@ function Container({ children }: { children: React.ReactNode }) {
 }
 
 const links = {
+  instagram: "https://www.instagram.com/enriquevillon",
   github: "https://github.com/enriquevillon25",
   linkedin: "https://www.linkedin.com/in/enriquevillon97/",
   email: "mailto:enriquevillon2597@example.com",
@@ -110,7 +111,7 @@ export function Nav() {
                   aria-controls="mobile-drawer"
                   aria-label={open ? "Close menu" : "Open menu"}
                 >
-                  <Menu className="h-4 w-4"  />
+                  <Menu className="h-4 w-4" />
                 </Button>
               </SheetTrigger>
 
@@ -170,7 +171,9 @@ export function Nav() {
                   <div className="mt-3 grid gap-2">
                     <SheetClose asChild>
                       <Button asChild className="w-auto">
-                        <a href={links.email}>Hire me</a>
+                        <a href={links.email} target="_blank">
+                          Hire me
+                        </a>
                       </Button>
                     </SheetClose>
                     <div className="flex items-center gap-2">
@@ -178,6 +181,7 @@ export function Nav() {
                         className="p-2 rounded-lg hover:bg-[hsl(var(--accent))]"
                         href={links.github}
                         aria-label="GitHub"
+                        target="_blank"
                       >
                         <Github className="h-5 w-5" />
                       </a>
@@ -185,13 +189,15 @@ export function Nav() {
                         className="p-2 rounded-lg hover:bg-[hsl(var(--accent))]"
                         href={links.linkedin}
                         aria-label="LinkedIn"
+                        target="_blank"
                       >
                         <Linkedin className="h-5 w-5" />
                       </a>
                       <a
                         className="p-2 rounded-lg hover:bg-[hsl(var(--accent))]"
-                        href={links.linkedin}
+                        href={links.instagram}
                         aria-label="LinkedIn"
+                        target="_blank"
                       >
                         <Instagram className="h-5 w-5" />
                       </a>

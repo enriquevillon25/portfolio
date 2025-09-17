@@ -36,6 +36,7 @@ import { Section } from "./components/ui/section";
 import TwoImageTransition from "./components/ui/twoImageTransition";
 
 const links = {
+  instagram: "https://www.instagram.com/enriquevillon",
   github: "https://github.com/enriquevillon25",
   linkedin: "https://www.linkedin.com/in/enriquevillon97/",
   email: "mailto:enriquevillon2597@example.com",
@@ -153,7 +154,7 @@ function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.05 }}
+              transition={{ duration: 0.3 }}
               className="mt-4 text-muted-foreground text-base md:text-lg"
             >
               Senior Front‑End & React Native Developer — I build fast,
