@@ -27,8 +27,15 @@ import { Nav } from "./components/ui/nav";
 import { Container } from "./components/ui/container";
 
 import testImage from "../app/images/auna.org_pe.png";
+import luxuryClubImage from "../app/images/luxuryClub.png";
+import rimacImage from "../app/images/rimac.png";
+import personalImage from "../app/images/personalpay.jpg";
 import testImage2 from "../app/images/auna_classic.png";
+import arcuswebp from "../app/images/arcus.webp";
 import testUtp from "../app/images/utp+class.png";
+import agenteR from "../app/images/agenteR.png";
+import pleizy from "../app/images/pleizy.png";
+import ripleytracker from "../app/images/ripleytracker.webp";
 import Image from "next/image";
 import { Slider } from "./components/ui/slider";
 import { Contact } from "./components/ui/contact";
@@ -60,7 +67,7 @@ const projects = [
     repo: "#",
   },
   {
-    image: testImage,
+    image: rimacImage,
     title: "Rimac Seguros Quoting System",
     description:
       "Dynamic web product for retirement insurance quotes. Improved performance and restructured architecture with React and Tailwind.",
@@ -69,7 +76,7 @@ const projects = [
     repo: "#",
   },
   {
-    image: testImage,
+    image: arcuswebp,
     title: "Arcus Perú (Cencosud)",
     description:
       "Mobile ERP for Wong and Metro stores nationwide. Developed features for store management, geolocation, and authentication.",
@@ -78,7 +85,7 @@ const projects = [
     repo: "#",
   },
   {
-    image: testImage,
+    image: personalImage,
     title: "PersonalPay Wallet (Telecom Argentina)",
     description:
       "Cross-platform mobile wallet app with dynamic interface, Clean Architecture, and API integration.",
@@ -87,7 +94,7 @@ const projects = [
     repo: "#",
   },
   {
-    image: testImage,
+    image: testUtp,
     title: "UTP+Class",
     description:
       "Virtual classroom platform for UTP. Implemented modules for evaluations, assignments, and task corrections with Hexagonal Architecture.",
@@ -96,7 +103,7 @@ const projects = [
     repo: "#",
   },
   {
-    image: testImage,
+    image: agenteR  ,
     title: "AgenteR (Ripley)",
     description:
       "Web app for financial agents at Ripley. Developed workflows, API integrations, and routing algorithms.",
@@ -105,8 +112,8 @@ const projects = [
     repo: "#",
   },
   {
-    image: testImage,
-    title: "Seller Ripley",
+    image: ripleytracker,
+    title: "RipleyTracker",
     description:
       "Mobile app for transport logistics at Ripley. Implemented geolocation, Google APIs, and PostgreSQL backend integration.",
     tags: ["React Native", "TypeScript", "PostgreSQL", "Google APIs"],
@@ -114,7 +121,7 @@ const projects = [
     repo: "#",
   },
   {
-    image: testImage,
+    image: pleizy,
     title: "Pleizy Marketplace",
     description:
       "E-commerce marketplace with Angular (web) and React Native (mobile). Delivered pixel-perfect UI and responsive design.",
@@ -123,8 +130,8 @@ const projects = [
     repo: "#",
   },
   {
-    image: testImage,
-    title: "Scotiabank Luxury",
+    image: luxuryClubImage,
+    title: "Scotiabank Luxury Club",
     description:
       "E-commerce platform for exclusive products. Built with Angular, Spring Boot, and iOS integration.",
     tags: ["Angular", "Spring Boot", "iOS", "MongoDB", "Node.js"],
