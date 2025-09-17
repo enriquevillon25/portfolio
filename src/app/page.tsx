@@ -45,46 +45,89 @@ const links = {
 const projects = [
   {
     image: testImage,
-    title: "Auna Org",
+    title: "Mi Auna",
     description:
-      "Responsive hero/banner slider with Storybook controls, tokens, and SVG assets. Built with React + Vite.",
-    tags: ["React", "Storybook", "Vite", "Design System"],
+      "Main digital healthcare app for Auna. Implemented appointment scheduling, insurance validation, and user flows with Clean Architecture and DDD.",
+    tags: [
+      "React",
+      "Angular",
+      "React Native",
+      "TypeScript",
+      "AWS",
+      "Storybook",
+    ],
     href: "#",
     repo: "#",
   },
   {
     image: testImage,
-    title: "Mi Auna App",
+    title: "Rimac Seguros Quoting System",
     description:
-      "Cross-platform React Native app for Auna customers, with authentication, billing, and support chat.",
-    tags: ["React Native", "Angular", "Reanimated"],
+      "Dynamic web product for retirement insurance quotes. Improved performance and restructured architecture with React and Tailwind.",
+    tags: ["React", "Redux", "TailwindCSS", "Styled Components", "AWS Cognito"],
     href: "#",
     repo: "#",
   },
   {
-    image: testUtp,
+    image: testImage,
+    title: "Arcus Perú (Cencosud)",
+    description:
+      "Mobile ERP for Wong and Metro stores nationwide. Developed features for store management, geolocation, and authentication.",
+    tags: ["React Native", "TypeScript", "Redux Toolkit", "Jest", "AWS"],
+    href: "#",
+    repo: "#",
+  },
+  {
+    image: testImage,
+    title: "PersonalPay Wallet (Telecom Argentina)",
+    description:
+      "Cross-platform mobile wallet app with dynamic interface, Clean Architecture, and API integration.",
+    tags: ["React Native", "TypeScript", "Material UI", "Storybook"],
+    href: "#",
+    repo: "#",
+  },
+  {
+    image: testImage,
     title: "UTP+Class",
     description:
-      "E‑learning mobile app for UTP university, with video streaming, quizzes, and certificates.",
-    tags: ["React", "Tailwind CSS", "MySQL", "Docker"],
+      "Virtual classroom platform for UTP. Implemented modules for evaluations, assignments, and task corrections with Hexagonal Architecture.",
+    tags: ["React", "TypeScript", "TailwindCSS", "Styled Components", "Azure"],
     href: "#",
     repo: "#",
   },
   {
     image: testImage,
-    title: "Strapi CMS Kit 2",
+    title: "AgenteR (Ripley)",
     description:
-      "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
-    tags: ["Strapi", "MySQL", "Docker"],
+      "Web app for financial agents at Ripley. Developed workflows, API integrations, and routing algorithms.",
+    tags: ["React", "TypeScript", "PostgreSQL", "Azure DevOps"],
     href: "#",
     repo: "#",
   },
   {
     image: testImage,
-    title: "Strapi CMS Kit 3",
+    title: "Seller Ripley",
     description:
-      "Dockerized Strapi + MySQL template with sane defaults, auth, and media pipeline.",
-    tags: ["Strapi", "MySQL", "Docker"],
+      "Mobile app for transport logistics at Ripley. Implemented geolocation, Google APIs, and PostgreSQL backend integration.",
+    tags: ["React Native", "TypeScript", "PostgreSQL", "Google APIs"],
+    href: "#",
+    repo: "#",
+  },
+  {
+    image: testImage,
+    title: "Pleizy Marketplace",
+    description:
+      "E-commerce marketplace with Angular (web) and React Native (mobile). Delivered pixel-perfect UI and responsive design.",
+    tags: ["Angular", "React Native", "MongoDB", "RxJS", "Redux"],
+    href: "#",
+    repo: "#",
+  },
+  {
+    image: testImage,
+    title: "Scotiabank Luxury",
+    description:
+      "E-commerce platform for exclusive products. Built with Angular, Spring Boot, and iOS integration.",
+    tags: ["Angular", "Spring Boot", "iOS", "MongoDB", "Node.js"],
     href: "#",
     repo: "#",
   },
@@ -92,31 +135,77 @@ const projects = [
 
 const experience = [
   {
-    role: "Senior Front‑End (React / ReactNative)",
-    company: "Auna Digital",
-    period: "2024 — Present",
+    role: "Senior Frontend Developer",
+    company: "Auna Clinic",
+    period: "Aug 2024 – Present",
     points: [
-      "Built and maintained design-system components (HeroSlider, FloatingButtonSection).",
-      "Led performance and accessibility improvements across web and mobile apps.",
-      "Collaborated with platform squads on CI/CD and package versioning.",
+      "Led development of Mi Auna digital product interface using React, Angular, and React Native.",
+      "Applied Clean Architecture, DDD, and SOLID principles to improve code quality and maintainability.",
+      "Implemented API RESTful integration, Storybook components, and automated deployments.",
+      "Guided team decisions, collaborated with UI/UX, backend, and QA, and managed POD leadership.",
+      "Delivered efficient features for appointment scheduling, validated insurance workflows, and coordinated store releases.",
     ],
   },
   {
-    role: "Senior Mobile (React Native)",
-    company: "Rbit Informática & Telecomunicaciones",
-    period: "2019 — Present",
+    role: "Senior Frontend Lead",
+    company: "Softtek",
+    period: "Apr 2024 – Jul 2024",
     points: [
-      "Computer repair, custom PC builds, and local SEO presence.",
-      "Handled sourcing, diagnostics, and data‑recovery workflows.",
+      "Developed digital quoting system for Rimac Seguros using React.js, Redux, and Tailwind CSS.",
+      "Improved project performance and restructured codebase with design patterns and clean architecture.",
+      "Led frontend team, coordinated with Business Managers, and presented solutions to final clients.",
+      "Implemented API consumption, unit tests (Jest, RTL), and AWS services like Cognito and CloudWatch.",
     ],
   },
   {
-    role: "Founder",
-    company: "Rbit Informática & Telecomunicaciones",
-    period: "2019 — Present",
+    role: "Senior Frontend Developer",
+    company: "Baufest",
+    period: "Jun 2022 – Jan 2024",
     points: [
-      "Computer repair, custom PC builds, and local SEO presence.",
-      "Handled sourcing, diagnostics, and data‑recovery workflows.",
+      "Built mobile ERP (Arcus Perú - Cencosud) with React Native, managing store operations nationwide.",
+      "Led frontend team, implemented geolocation, authentication, and high-complexity features.",
+      "Developed PersonalPay mobile wallet (Telecom Argentina) with React Native and Clean Architecture.",
+      "Implemented Storybook, Material UI, API integrations, and functional programming best practices.",
+    ],
+  },
+  {
+    role: "Frontend Developer Semi-Senior",
+    company: "Universidad Tecnológica del Perú (UTP)",
+    period: "Sep 2021 – Jun 2022",
+    points: [
+      "Developed UTP+Class virtual classroom web app with React.js, Tailwind CSS, and Styled Components.",
+      "Implemented evaluations, assignments, and task correction modules with Hexagonal Architecture.",
+      "Led frontend team in PODs, collaborated with UI/UX, backend, and QA for agile delivery.",
+    ],
+  },
+  {
+    role: "Full Stack Developer Semi-Senior",
+    company: "Ripley",
+    period: "Mar 2021 – Sep 2021",
+    points: [
+      "Developed flows for Ripley’s AgenteR (web) and Seller (mobile) apps with React.js and React Native.",
+      "Designed PostgreSQL database and implemented Google APIs (Recaptcha, Maps, Geolocation).",
+      "Implemented routing algorithms, Redux for state management, and coordinated stakeholder needs.",
+    ],
+  },
+  {
+    role: "Frontend Developer",
+    company: "Rbit",
+    period: "Sep 2020 – Mar 2021",
+    points: [
+      "Developed Pleizy marketplace web (Angular) and mobile app (React Native).",
+      "Implemented database design with MongoDB and applied RxJS, Redux, and responsive UI practices.",
+      "Delivered pixel-perfect design, SOLID principles, and unit testing with Jest.",
+    ],
+  },
+  {
+    role: "Junior Full Stack Developer",
+    company: "Sonr Digital",
+    period: "Jun 2019 – Sep 2020",
+    points: [
+      "Developed Scotiabank Luxury ecommerce platform with Angular and Spring Boot APIs.",
+      "Implemented shopping cart, web/mobile features, and MVVM/DDD architecture.",
+      "Worked with Angular, Node.js, iOS (Swift), SCSS, and applied Scrum methodology.",
     ],
   },
 ];
@@ -248,7 +337,10 @@ function Projects() {
       {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"> */}
       <Slider className="mt-2" slideClassName="w-full sm:w-1/2 lg:w-1/3">
         {projects.map((p) => (
-          <Card key={p.title} className="grid grid-rows-[3fr_7fr] overflow-hidden">
+          <Card
+            key={p.title}
+            className="grid grid-rows-[3fr_7fr] overflow-hidden"
+          >
             <CardHeader>
               <CardTitle className="text-base md:text-lg">{p.title}</CardTitle>
               <CardDescription>{p.description}</CardDescription>
