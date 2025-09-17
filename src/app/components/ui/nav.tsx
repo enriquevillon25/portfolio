@@ -12,7 +12,7 @@ import {
 } from "./sheet";
 import { Github, Linkedin, Instagram, Menu, X } from "lucide-react";
 import { ThemeToggle } from "./themeToggle";
-
+import { LangToggle } from "./langToogle";
 // Contenedor simple
 function Container({ children }: { children: React.ReactNode }) {
   return (
@@ -89,6 +89,7 @@ export function Nav() {
               </a>
             ))}
             <ThemeToggle />
+            <LangToggle />
             <Button asChild>
               <a href={links.email}>Hire me</a>
             </Button>
@@ -98,6 +99,8 @@ export function Nav() {
           <Sheet open={open} onOpenChange={setOpen}>
             <div className="md:hidden flex items-center gap-2">
               <ThemeToggle />
+              <LangToggle />
+
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"

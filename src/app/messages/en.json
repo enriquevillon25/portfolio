@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "name": "Enrique Villón",
+    "subtitle": "Senior Front-End & React Native Developer — I build fast, accessible products and robust design-system components.",
+    "cta": "See my work",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "featured": "Featured",
+    "latestPreview": "Latest project preview",
+    "open": "Open"
+  },
+  "sections": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience"
+  },
+  "about": {
+    "bio": "I’m a software engineer focused on product quality and developer experience. I design systems, ship features, and mentor teams on accessibility, testing, performance, and maintainable front-end architectures."
+  },
+  "projects": {
+    "miAuna": {
+      "title": "Mi Auna",
+      "description": "Main digital healthcare app for Auna. Implemented appointment scheduling, insurance validation, and user flows with Clean Architecture and DDD."
+    },
+    "rimac": {
+      "title": "Rimac Seguros Quoting System",
+      "description": "Dynamic web product for retirement insurance quotes. Improved performance and restructured architecture with React and Tailwind."
+    },
+    "arcus": {
+      "title": "Arcus Perú (Cencosud)",
+      "description": "Mobile ERP for Wong and Metro stores nationwide. Developed features for store management, geolocation, and authentication."
+    },
+    "personalPay": {
+      "title": "PersonalPay Wallet (Telecom Argentina)",
+      "description": "Cross-platform mobile wallet app with dynamic interface, Clean Architecture, and API integration."
+    },
+    "utpClass": {
+      "title": "UTP+Class",
+      "description": "Virtual classroom platform for UTP. Implemented modules for evaluations, assignments, and task corrections with Hexagonal Architecture."
+    },
+    "agenteR": {
+      "title": "AgenteR (Ripley)",
+      "description": "Web app for financial agents at Ripley. Developed workflows, API integrations, and routing algorithms."
+    },
+    "ripleyTracker": {
+      "title": "RipleyTracker",
+      "description": "Mobile app for transport logistics at Ripley. Implemented geolocation, Google APIs, and PostgreSQL backend integration."
+    },
+    "pleizy": {
+      "title": "Pleizy Marketplace",
+      "description": "E-commerce marketplace with Angular (web) and React Native (mobile). Delivered pixel-perfect UI and responsive design."
+    },
+    "luxuryClub": {
+      "title": "Scotiabank Luxury Club",
+      "description": "E-commerce platform for exclusive products. Built with Angular, Spring Boot, and iOS integration."
+    }
+  },
+  "experience": {
+    "auna": {
+      "role": "Senior Frontend Developer",
+      "company": "Auna Clinic",
+      "period": "Aug 2024 – Present",
+      "points": {
+        "1": "Led development of Mi Auna digital product interface using React, Angular, and React Native.",
+        "2": "Applied Clean Architecture, DDD, and SOLID principles to improve code quality and maintainability.",
+        "3": "Implemented API RESTful integration, Storybook components, and automated deployments.",
+        "4": "Guided team decisions, collaborated with UI/UX, backend, and QA, and managed POD leadership.",
+        "5": "Delivered efficient features for appointment scheduling, validated insurance workflows, and coordinated store releases."
+      }
+    },
+    "softtek": {
+      "role": "Senior Frontend Lead",
+      "company": "Softtek",
+      "period": "Apr 2024 – Jul 2024",
+      "points": {
+        "1": "Developed digital quoting system for Rimac Seguros using React.js, Redux, and Tailwind CSS.",
+        "2": "Improved project performance and restructured codebase with design patterns and clean architecture.",
+        "3": "Led frontend team, coordinated with Business Managers, and presented solutions to final clients.",
+        "4": "Implemented API consumption, unit tests (Jest, RTL), and AWS services like Cognito and CloudWatch."
+      }
+    },
+    "baufest": {
+      "role": "Senior Frontend Developer",
+      "company": "Baufest",
+      "period": "Jun 2022 – Jan 2024",
+      "points": {
+        "1": "Built mobile ERP (Arcus Perú - Cencosud) with React Native, managing store operations nationwide.",
+        "2": "Led frontend team, implemented geolocation, authentication, and high-complexity features.",
+        "3": "Developed PersonalPay mobile wallet (Telecom Argentina) with React Native and Clean Architecture.",
+        "4": "Implemented Storybook, Material UI, API integrations, and functional programming best practices."
+      }
+    },
+    "utp": {
+      "role": "Frontend Developer Semi-Senior",
+      "company": "Universidad Tecnológica del Perú (UTP)",
+      "period": "Sep 2021 – Jun 2022",
+      "points": {
+        "1": "Developed UTP+Class virtual classroom web app with React.js, Tailwind CSS, and Styled Components.",
+        "2": "Implemented evaluations, assignments, and task correction modules with Hexagonal Architecture.",
+        "3": "Led frontend team in PODs, collaborated with UI/UX, backend, and QA for agile delivery."
+      }
+    },
+    "ripley": {
+      "role": "Full Stack Developer Semi-Senior",
+      "company": "Ripley",
+      "period": "Mar 2021 – Sep 2021",
+      "points": {
+        "1": "Developed flows for Ripley’s AgenteR (web) and Seller (mobile) apps with React.js and React Native.",
+        "2": "Designed PostgreSQL database and implemented Google APIs (Recaptcha, Maps, Geolocation).",
+        "3": "Implemented routing algorithms, Redux for state management, and coordinated stakeholder needs."
+      }
+    },
+    "rbit": {
+      "role": "Frontend Developer",
+      "company": "Rbit",
+      "period": "Sep 2020 – Mar 2021",
+      "points": {
+        "1": "Developed Pleizy marketplace web (Angular) and mobile app (React Native).",
+        "2": "Implemented database design with MongoDB and applied RxJS, Redux, and responsive UI practices.",
+        "3": "Delivered pixel-perfect design, SOLID principles, and unit testing with Jest."
+      }
+    },
+    "sonr": {
+      "role": "Junior Full Stack Developer",
+      "company": "Sonr Digital",
+      "period": "Jun 2019 – Sep 2020",
+      "points": {
+        "1": "Developed Scotiabank Luxury ecommerce platform with Angular and Spring Boot APIs.",
+        "2": "Implemented shopping cart, web/mobile features, and MVVM/DDD architecture.",
+        "3": "Worked with Angular, Node.js, iOS (Swift), SCSS, and applied Scrum methodology."
+      }
+    }
+  }
+}
